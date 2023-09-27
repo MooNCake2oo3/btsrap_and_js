@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date and Time</title>
+</head>
+<body>
+  <div id="date"></div>
+  <div id="time"></div>
+
+  <script>
+    // Get the current date and time.
+    const date = new Date();
+
+    // Display the current date and time in the HTML elements with the IDs `date` and `time`.
+    document.getElementById('date').innerHTML = date.toLocaleDateString();
+    document.getElementById('time').innerHTML = date.toLocaleTimeString();
+
+    // Set an interval to update the date and time every second.
+    setInterval(() => {
+      // Get the current date and time.
+      const date = new Date();
+
+      // Display the current date and time in the HTML elements with the IDs `date` and `time`.
+      document.getElementById('date').innerHTML = date.toLocaleDateString();
+      document.getElementById('time').innerHTML = date.toLocaleTimeString();
+    }, 1000);
+  </script>
+</body>
+</html>

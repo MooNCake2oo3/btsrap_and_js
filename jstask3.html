@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication and Division Calculator</title>
+</head>
+<body>
+  <form action="#">
+    <input type="number" id="firstNumber" placeholder="First number">
+    <input type="number" id="secondNumber" placeholder="Second number">
+    <select id="operation">
+      <option value="multiply">Multiply</option>
+      <option value="divide">Divide</option>
+    </select>
+    <button type="submit">Calculate</button>
+  </form>
+  <p id="result"></p>
+
+  <script>
+    // Get the values of the two numbers from the input fields.
+    const num1 = document.getElementById('firstNumber').value;
+    const num2 = document.getElementById('secondNumber').value;
+
+    // Check which operation the user wants to perform (multiplication or division).
+    const operation = document.getElementById('operation').value;
+
+    // Perform the operation and store the result in a variable.
+    let result;
+    if (operation === 'multiply') {
+      result = num1 * num2;
+    } else if (operation === 'divide') {
+      result = num1 / num2;
+    } else {
+      // Handle invalid operation.
+      console.log('Invalid operation selected.');
+    }
+
+    // Display the result to the user.
+    document.getElementById('result').innerHTML = result;
+  </script>
+</body>
+</html>
